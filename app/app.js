@@ -1,7 +1,7 @@
 var myApp = angular.module('myApp', []);
 
 // use an array to include the dependencies to avoid hitches 
-// during javascript minifications (compressing a js code)
+// during javascript minifications (compressing & removing unnecessary js code)
 // also a best practice
 
 myApp.controller('AvengerController', ['$scope', function($scope) {
