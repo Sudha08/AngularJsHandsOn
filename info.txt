@@ -1,0 +1,112 @@
+Angular JS
+--------------------------------------------------------------
+
+What is Angular Js?
+---------------------
+- MVC style javascript framework for creating single page apps
+- Write our code in the way Angular JS wants us to, so we can use it's 
+  features in our projects
+--------------------------------------------------------------
+
+Features:
+---------------
+- 2 way data binding
+- templating
+- DOM interaction
+- filters
+- directives
+- many more...
+--------------------------------------------------------------
+
+Single Page Apps
+------------------
+- Angular JS primarily used to make single page, dat driven applications
+- Additonal content brought into the web page without the need to refresh
+- Use 'Views' (the V in MVC) to achieve this
+--------------------------------------------------------------
+
+What will be covered?
+----------------------
+- MVC overview
+- 2-way data binding
+- filters, directives and expressions
+- controllers and how to use them
+- views and routing
+- animations
+- form validation
+- create a to-do-list application
+--------------------------------------------------------------
+
+Prerequisites
+---------------
+- Javascript (essential)
+- HTML (essential)
+- CSS (optional)
+- JSON (optional)
+--------------------------------------------------------------
+
+MVC Architecture
+------------------
+
+                        Application
+                             |
+                             |
+                     -----------------    
+                    |        |        |
+                    |        |        |
+                   ___      ___      ___
+                  | M |    | V |    | C |
+                  |___|    |___|    |___|
+
+Model:
+-------
+- Think of model as data
+- JSON, database data, etc.
+
+View:
+-------
+- Used to display content & data to a user in a browser
+- HTML
+- Use expressions to insert data into views - <html tag> {{data}} </html tag>
+
+controller:
+------------
+- control th functionality of our views
+- performs the interaction between our models and our views
+- different controllers for different areas in our application
+
+Example:
+---------
+- User clicks a 'show users' button in a view
+- The 'UserController' recognizes the button click event and performs a function
+- The function communicate with the 'users' model and retrieves all the user data
+- The controller passes accessibility to this data to the view, which then displays
+  it to the end user via expressions
+--------------------------------------------------------------
+
+MVW - architecture used in AngularJs
+--------------------------------------
+
+- MVC - Model View Controller
+- MVW - Model View Whatever   W - can be Controller/ VM - View Model (as in MVVM)
+                                    / P - Presenter
+        (MVW also called as MV*)
+- Undelying principle - Separation of Concerns
+
+https://stackoverflow.com/questions/13329485/what-does-mvw-stand-for
+--------------------------------------------------------------
+
+Download Angular.js
+---------------------
+
+https://angularjs.org -> download angular.min.js -> minified version & add it in the app
+--------------------------------------------------------------
+
+
+
+
+
+
+
+
+
