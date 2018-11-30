@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="myApp">
   <head>
     <title>Sudha's Angular HandsOn</title>
     <link href="content/styles.css" rel="stylesheet" type="text/css" />
     <script src="app\lib\angular.min.js"></script>
+    <script src="app\app.js"></script>
   </head>
   <body>
-    <input type="text" ng-model="favSweet" placeholder="Enter your fav sweet" />
-    <p>Your fav sweet is {{favSweet}}</p>
-  </body> 
+    <div ng-controller="AvengerController">
+      <p class={{color}}>{{message}}</p>
+      <ul> 
+        <li ng-repeat="avenger in avengers">{{avenger}}</li>
+      </ul>
+    </div>    
+  </body>
 </html>

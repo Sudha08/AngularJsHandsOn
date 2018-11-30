@@ -102,6 +102,62 @@ Download Angular.js
 https://angularjs.org -> download angular.min.js -> minified version & add it in the app
 --------------------------------------------------------------
 
+2 way data binding: 
+---------------------
+
+- refer 2waydatabinding.html
+--------------------------------------------------------------
+
+Directives:
+------------
+
+https://docs.angularjs.org/api/ng/directive/ngClassOdd 
+--------------------------------------------------------------
+
+Expressions:
+-------------
+
+- refer expressions.html
+
+- ng-init - is the directive used to initialize our app with some data 
+--------------------------------------------------------------
+
+ng-repeat directive : 
+----------------------
+
+- refer ng-repeat.html
+--------------------------------------------------------------
+
+Angular Modules: 
+--------------------
+
+- refer app.js, index.html (ng-app = "myApp")
+
+ var myApp = angular.module('myApp', []);
+      |                       |           
+      V                       V
+    just a variable          name of the module - used in ng-app
+    name. can be anything
+
+    [] -> Array to store the dependencies (extra features for the app)
+
+    - By doing this, the app is namespaced and won't be disturbed by any external scripts and variables
+    - All the application code will reside in this module
+
+    - To let Angular know that this module will be controlling the app, use it in the 'ng-app' directive
+    - Module can be considered as the container for different components like controllers, config & run methods
+
+--------------------------------------------------------------
+
+Controllers:
+-------------
+- refer - index.html, app.js
+- $scope - is a dependency
+- In MVC, view - index.html, controller - AvengerController, model - data in $scope
+--------------------------------------------------------------
+
+
+
 
 
 
