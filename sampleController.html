@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="sampleApp">
   <head>
     <title>Sudha's Angular HandsOn</title>
     <link href="content/styles.css" rel="stylesheet" type="text/css" />
     <script src="app\lib\angular.min.js"></script>
-    <script src="app\app.js"></script>
+    <script src="app\sampleController.js"></script>
   </head>
   <body>
-    <div ng-controller="AvengerController">      
+    <div ng-controller="SampleController">
+      <p class={{color}}>{{message}}</p>
       <ul> 
         <li ng-repeat="avenger in avengers">{{avenger}}</li>
       </ul>

@@ -151,10 +151,18 @@ Angular Modules:
 
 Controllers:
 -------------
-- refer - index.html, app.js
+- refer - sample.html, sampleController.js
 - $scope - is a dependency
-- In MVC, view - index.html, controller - AvengerController, model - data in $scope
+- In MVC, view - sample.html, controller - SampleController, model - data in $scope
 --------------------------------------------------------------
+
+Filters:
+----------
+- filters change the display of how we output data.
+- order the data, format the data (date, currency, etc.), add some prefix
+
+--------------------------------------------------------------
+
 
 
 
