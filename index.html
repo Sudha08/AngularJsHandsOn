@@ -2,15 +2,33 @@
 <html lang="en" ng-app="myApp">
   <head>
     <title>Sudha's Angular HandsOn</title>
-    <link href="content/styles.css" rel="stylesheet" type="text/css" />
+    <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
     <script src="app\lib\angular.min.js"></script>
     <script src="app\app.js"></script>
   </head>
   <body>
-    <div ng-controller="AvengerController">      
-      <ul> 
-        <li ng-repeat="avenger in avengers">{{avenger}}</li>
-      </ul>
+    <header ng-include="'header.html'"></header>
+    <div class="content">
+      <div ng-controller="AvengerController">
+        <button ng-click="order = 'name'">Order by Name</button>
+        <button ng-click="order = 'belt'">Order by Belt</button>
+        <input type="text" ng-model="search" placeholder="Search for an avenger"/>   
+        <ul> 
+          <li ng-repeat="avenger in avengers | orderBy: order | filter: search" ng-show="avenger.available">
+            <img ng-src="{{avenger.thumb}}" style="margin: -12px 10px 0 0; float: left; width: 50px;" 
+                 ng-show = "avenger.thumb"/>
+            <h3>{{avenger.name}} - {{avenger.rate | currency: '₹'}}</h3>
+            <div class="remove" ng-click="removeAvenger(avenger)">x</div>
+            <span class="belt" style="background: {{avenger.belt}}"> {{avenger.belt}}  belt </span>
+         </li>
+        </ul>
+        <form ng-submit="addAvenger()">
+          <input type="text" placeholder="name" ng-model="newAvenger.name" />
+          <input type="text" placeholder="belt" ng-model="newAvenger.belt" />
+          <input type="text" placeholder="rate" ng-model="newAvenger.rate" />
+          <input type="submit" value="Add new avenger " />
+        </form>
+      </div>
     </div>    
   </body>
 </html>

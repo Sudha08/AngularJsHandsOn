@@ -160,8 +160,68 @@ Filters:
 ----------
 - filters change the display of how we output data.
 - order the data, format the data (date, currency, etc.), add some prefix
+- orderBy: 'name' - orders in the ascending order & 
+  orderBy: '-name' - orders in the descending order
 
+  https://docs.angularjs.org/guide/filter
+  https://docs.angularjs.org/api/ng/filter
+
+  refer filters.html, filterController.js    
 --------------------------------------------------------------
+
+ng-include directive:
+----------------------
+- used to organize the files
+- can bring html from another file and dump it into the current view
+- break a complex html page into logical pieces
+- avoid repetition of a html code block (create an external html file and use it in the 
+                                         required places)
+- eg: navigation bar (to be included in all the pages)
+
+- <ng-include src="'header.html'"></ng-include> - valid usage but not recommended
+
+refer - index.html, header.html
+--------------------------------------------------------------
+
+ng-show & ng-hide directives:
+------------------------------
+- used to show/hide any elements in the html page
+- ng-show - directive to show based on a 'true/ false'
+- ng-hide - directive to hide based on a 'true/ false'
+- ng-show = true - will display everything / ng-show = false - will hide everything
+- use negations like this - ng-show = !available (available = true/false)
+- same goes for ng-hide
+
+refer - index.html, app.js
+--------------------------------------------------------------
+
+ng-click directive:
+--------------------
+- allows to respond to click events on the elements
+
+refer - index.html, app.js
+--------------------------------------------------------------
+
+ng-submit directive:
+---------------------
+- allows to handle form submits
+
+refer - index.html, app.js
+--------------------------------------------------------------
+
+ng-src directive:
+-------------------
+- allows to load images dynamically
+- webpage will be loaded properly using <img src> but will throw some
+  error as image can't be dynamically loaded while loading the app
+- on using ng-src angular intercepts the img src and displays the image
+
+refer - index.html, app.js
+--------------------------------------------------------------
+
+
+
+
 
 
 
