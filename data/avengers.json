@@ -1,0 +1,31 @@
+[{
+	"name": "Iron Man",
+	"belt": "red",
+	"rate": 500,
+	"available": true,
+	"thumb": "content/img/im.jpg"
+}, {
+	"name": "Hulk",
+	"belt": "green",
+	"rate": 200,
+	"available": true,
+	"thumb": "content/img/hulk.jpg"
+}, {
+	"name": "Thor",
+	"belt": "black",
+	"rate": 300,
+	"available": true,
+	"thumb": "content/img/thor.jpg"
+}, {
+	"name": "Spider Man",
+	"belt": "orange",
+	"rate": 50,
+	"available": true,
+	"thumb": "content/img/spidey.jpg"
+}, {
+	"name": "Captain America",
+	"belt": "blue",
+	"rate": 10,
+	"available": false,
+	"thumb": "content/img/cap.jpg"
+}]

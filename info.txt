@@ -219,6 +219,42 @@ ng-src directive:
 refer - index.html, app.js
 --------------------------------------------------------------
 
+Views & Routing:
+-----------------
+Views:
+-------
+- main feature for a single page application
+- ng-view can be a tag directive or an attribute
+- using this directive angular will know where to put the view
+-----------------------
+Routing:
+---------
+- download the module used for routing - https://code.angularjs.org/1.7.5 - angular-route.min.js
+- add it in the project library
+- use it as a dependency in the app - var myApp = angular.module('myApp', ['ngRoute']);
+                                                                               |
+                                                                               v
+                                                              (name of the module) dependency used for routing
+- "ngRoute" allows the usage of "$routeProvider" dependency
+                                      |
+                                      v
+                                part of ngRoute module
+
+refer index.html, directory.html, header.html, home.html, app.js
+--------------------------------------------------------------
+
+JSON & $http:
+---------------
+- use method to convert js to JSON - angular.toJson(data);
+
+- https://jsonlint.com/ - to validate thr JSON data
+
+- use the $http service to fetch the JSON file/data to be accessible from the controller
+- service is a bit of code that handles some common operations
+
+refer app.js, data/avengers.json
+--------------------------------------------------------------
+
 
 
 

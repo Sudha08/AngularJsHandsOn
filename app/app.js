@@ -1,6 +1,20 @@
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('myApp', ['ngRoute']);
 
-myApp.controller('AvengerController', ['$scope', function($scope) {
+myApp.config(['$routeProvider', function($routeProvider) {
+
+    $routeProvider
+        .when('/home', {
+            templateUrl: 'views/home.html'
+        })
+        .when('/directory', {
+            templateUrl: 'views/directory.html',
+            controller: 'AvengerController'
+        }).otherwise({
+            redirectTo: '/home'
+        });
+}]);
+
+myApp.controller('AvengerController', ['$scope', '$http', function($scope, $http) {
 
     $scope.removeAvenger = function(avenger) {
         var removedAvenger = $scope.avengers.indexOf(avenger);
@@ -21,42 +35,13 @@ myApp.controller('AvengerController', ['$scope', function($scope) {
         $scope.newAvenger.rate = "";
     };
 
-    $scope.avengers = [
-        {
-            name: "Iron Man",
-            belt: "red",
-            rate: 500,
-            available: true,
-            thumb: "content/img/im.jpg"
-        },
-        {
-            name: "Hulk",
-            belt: "green",
-            rate: 200,
-            available: true,
-            thumb: "content/img/hulk.jpg"
-        },
-        {
-            name: "Thor",
-            belt: "black",
-            rate: 300,
-            available: true,
-            thumb: "content/img/thor.jpg"
-        },
-        {
-            name: "Spider Man",
-            belt: "orange",
-            rate: 50,
-            available: true,
-            thumb: "content/img/spidey.jpg"
-        },
-        {
-            name: "Captain America",
-            belt: "blue",
-            rate: 10,
-            available: false,
-            thumb: "content/img/cap.jpg"
-        }
-    ];
-    
+    $http({
+        method: 'GET',
+        url: 'data/avengers.json'
+     }).then(function (response){
+        $scope.avengers = response.data;  
+     },function (error){
+        throw error;
+     });
+
 }]);
