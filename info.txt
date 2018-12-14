@@ -255,18 +255,46 @@ JSON & $http:
 refer app.js, data/avengers.json
 --------------------------------------------------------------
 
+Custom Directives:
+-------------------
+- naming convention: myApp.directive('randomAvenger) has to be used as
+                     <random-avenger> </random-avenger> in the template
 
+- restrict : 'E' - element, 'A' - attribute, 'C' - classes , 'M' - comments
+  E - directive can only be used as a html element
+  A - directive can only be used as a html attribute
+  C / M - are not used often
+- can be used together - restrict: 'EA'
 
+- scope : to bind the data from the directive to html and also binds the data from the controller 
+          to the direcitve
+          eg: $scope.avengers in AvengersController can be used inside the directive
+- scope: {
+            avengers: '=',
+            title: '=',
+            name: '='
+        }
+- <random-avenger avengers="avengers" title="'Random Avenger'"></random-avenger>
+- The data present inside the scope will be assigned to the attributes in the directive element
 
+- template: '<img ng-src="{{avengers[random].thumb}}">' - will also work
+- templateUrl: specify the template to be loaded inplace of the directive
 
+syntax:
+--------
 
+ myApp.directive('name', [function(dependencies) {
+  return {
+    restrict: 'E/A',
+    scope: {
+      data: '='
+    },
+    template/ templateUrl : template/URL,
+    controller: {
+      some operations - can be used within the directive & the template
+    }
+  };
+}]);
 
-
-
-
-
-
-
-
-
-
+refer - home.html, random.html, app.js
+--------------------------------------------------------------
