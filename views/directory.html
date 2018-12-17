@@ -2,7 +2,7 @@
     <button ng-click="order = 'name'">Order by Name</button>
     <button ng-click="order = 'belt'">Order by Belt</button>
     <input type="text" ng-model="search" placeholder="Search for an avenger"/>   
-    <ul> 
+    <ul id="avenger-list"> 
     <li ng-repeat="avenger in avengers | orderBy: order | filter: search" ng-show="avenger.available">
         <img ng-src="{{avenger.thumb}}" style="margin: -12px 10px 0 0; float: left; width: 50px;" 
             ng-show = "avenger.thumb"/>

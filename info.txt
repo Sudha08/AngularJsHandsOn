@@ -324,3 +324,27 @@ Transclude & Replace:
     refer - app.js, random.html
 --------------------------------------------------------------
 
+Animations:
+------------
+- using "ng-animate" for install animation effects
+- download the module used for routing - https://code.angularjs.org/1.7.5 - angular-animate.min.js
+- add it in the project library
+- use it as a dependency in the app - var myApp = angular.module('myApp', ['ngAnimate']);
+                                                                               |
+                                                                               v
+                                                              (name of the module) dependency used for routing
+- refer - https://docs.angularjs.org/api/ngAnimate - for different animation CSS classes
+
+- animation              animation
+  start point            end point
+   ___                    ___
+  |   | ________________ |   |
+  |___|                  |___|
+  
+  .ng-enter              .ng-enter
+                         .ng-enter-active
+
+- The same goes for "ng-leave" - used when we remove an item
+
+- refer - style.css - Animation classes
+--------------------------------------------------------------
