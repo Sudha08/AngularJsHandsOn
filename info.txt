@@ -298,3 +298,29 @@ syntax:
 
 refer - home.html, random.html, app.js
 --------------------------------------------------------------
+Transclude & Replace:
+-----------------------
+- Transclude:
+  -----------
+   - used to show the content inside the custom directive
+   - In home.html,
+    <random-avenger avengers="avengers" title="'Random Avenger'">
+        <p>Checkout our random avenger</p> - normally this won't be shown in the html page
+    </random-avenger>
+  - In random.html,
+    <div ng-transclude></div> - to tell angular where to place the custom directive content
+  - In the custom directive definition,
+    use transclude: true, to access the content inside the custom directive
+
+    refer - home.html, random.html, app.js
+
+- Replace:
+ ----------
+  - since asper html semantics, we can't have a tag like <random-avenger>, this property will help 
+    in replacing the custom tag with the first element in the custom directive template
+  - Eg: <random-avenger> will be replaced with a <div> tag from random.html since its the 
+    first tag in the template
+
+    refer - app.js, random.html
+--------------------------------------------------------------
+
