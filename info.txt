@@ -384,6 +384,11 @@ Form validation:
   ------------------------------------
 
 - refer - contact.html, app.js, styles.css
+--------------------------------------------------------------
 
+Location service:
+-----------------
+- To use the $location dependency
+- refer - contact.html, contact-success.html, app.js - contactController
 --------------------------------------------------------------
 

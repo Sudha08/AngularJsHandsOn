@@ -7,8 +7,13 @@ myApp.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'views/home.html',
             controller: 'AvengerController'
         })
-        .when('/home', {
-            templateUrl: 'views/contact.html'            
+        .when('/contact', {
+            templateUrl: 'views/contact.html',
+            controller: 'contactController'            
+        })
+        .when('/contact-success', {
+            templateUrl: 'views/contact-success.html',
+            controller: 'contactController'            
         })
         .when('/directory', {
             templateUrl: 'views/directory.html',
@@ -69,4 +74,10 @@ myApp.controller('AvengerController', ['$scope', '$http', function($scope, $http
         throw error;
      });
 
+}]);
+
+myApp.controller('contactController', ['$scope', '$location', function($scope, $location) {
+    $scope.sendMessage = function() {
+        $location.path('contact-success');
+    };
 }]);
