@@ -20,7 +20,7 @@ Features:
 
 Single Page Apps
 ------------------
-- Angular JS primarily used to make single page, dat driven applications
+- Angular JS primarily used to make single page, data driven applications
 - Additonal content brought into the web page without the need to refresh
 - Use 'Views' (the V in MVC) to achieve this
 --------------------------------------------------------------
@@ -71,7 +71,7 @@ View:
 
 controller:
 ------------
-- control th functionality of our views
+- control the functionality of our views
 - performs the interaction between our models and our views
 - different controllers for different areas in our application
 
@@ -335,16 +335,23 @@ Animations:
                                                               (name of the module) dependency used for routing
 - refer - https://docs.angularjs.org/api/ngAnimate - for different animation CSS classes
 
-- animation              animation
-  start point            end point
-   ___                    ___
-  |   | ________________ |   |
-  |___|                  |___|
-  
-  .ng-enter              .ng-enter
-                         .ng-enter-active
+        animation              animation
+        start point            end point
+         ___                    ___
+        |   | ________________ |   |
+        |___|                  |___|
+        
+        .ng-enter              .ng-enter
+                              .ng-enter-active
 
 - The same goes for "ng-leave" - used when we remove an item
 
-- refer - style.css - Animation classes
+- refer - style.css - Animation classes , app.js
+
+Stagger effect:
+----------------
+ - effective when multiple items are added / removed
+
+ - refer - app.js, directory.html, styles.css
+
 --------------------------------------------------------------

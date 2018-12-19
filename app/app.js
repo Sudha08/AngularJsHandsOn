@@ -53,6 +53,10 @@ myApp.controller('AvengerController', ['$scope', '$http', function($scope, $http
         $scope.newAvenger.rate = "";
     };
 
+    $scope.removeAll = function() {
+        $scope.avengers = [];
+    }
+
     $http({
         method: 'GET',
         url: 'data/avengers.json'

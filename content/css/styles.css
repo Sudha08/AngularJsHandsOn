@@ -162,4 +162,9 @@
       opacity: 0;
       transform: translateX(-100%);
     }
+
+    #avenger-list li.ng-leave-stagger {
+      transition-delay: 0.2s;
+      transition-duration: 0;
+    }
     
