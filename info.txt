@@ -353,5 +353,37 @@ Stagger effect:
  - effective when multiple items are added / removed
 
  - refer - app.js, directory.html, styles.css
+--------------------------------------------------------------
+
+Form validation:
+----------------
+- Form Classes:
+  -------------
+    - ng-pristine - when form/input not used yet
+    - ng-dirty - when form/input has been used
+
+    - ng-untouched - when input has not been touched
+    - ng-touched - when input has been touched
+
+    - ng-valid - when a form is valid
+    - ng-invalid - when a form is not valid
+
+- Form properties:
+  -----------------
+   For each form class, there is a corresponding property that takes a boolean value
+
+  ---------------------------------
+    CLASS        -   PROPERTY
+  --------------------------------- 
+   ng-pristine   -    $pristine
+   ng-dirty      -    $dirty
+   ng-untouched  -    $untouched
+   ng-touched    -    $touched
+   ng-valid      -    $valid
+   ng-invalid    -    $invalid
+  ------------------------------------
+
+- refer - contact.html, app.js, styles.css
 
 --------------------------------------------------------------
+
