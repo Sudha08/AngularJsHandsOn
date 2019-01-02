@@ -6,6 +6,8 @@ What is Angular Js?
 - MVC style javascript framework for creating single page apps
 - Write our code in the way Angular JS wants us to, so we can use it's 
   features in our projects
+- open source
+- cross-browser compliant
 --------------------------------------------------------------
 
 Features:
