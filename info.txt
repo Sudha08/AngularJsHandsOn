@@ -194,21 +194,21 @@ ng-show & ng-hide directives:
 - use negations like this - ng-show = !available (available = true/false)
 - same goes for ng-hide
 
-refer - index.html, app.js
+refer - contact.html, app.js
 --------------------------------------------------------------
 
 ng-click directive:
 --------------------
 - allows to respond to click events on the elements
 
-refer - index.html, app.js
+refer - directory.html, app.js
 --------------------------------------------------------------
 
 ng-submit directive:
 ---------------------
 - allows to handle form submits
 
-refer - index.html, app.js
+refer - contact.html, app.js
 --------------------------------------------------------------
 
 ng-src directive:
@@ -218,7 +218,7 @@ ng-src directive:
   error as image can't be dynamically loaded while loading the app
 - on using ng-src angular intercepts the img src and displays the image
 
-refer - index.html, app.js
+refer - directory.html, random.html, app.js
 --------------------------------------------------------------
 
 Views & Routing:
